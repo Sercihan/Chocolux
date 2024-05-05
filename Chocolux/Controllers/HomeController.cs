@@ -1,4 +1,6 @@
 using Chocolux.Models;
+using Chocolux.ORM.Context;
+using Chocolux.ORM.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,13 +8,8 @@ namespace Chocolux.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        DataContext db = new DataContext();
         public IActionResult Index()
         {
             return View();
@@ -26,12 +23,14 @@ namespace Chocolux.Controllers
 
         public IActionResult Chocolate()
         {
-            return View();
+            List<Chocolate> chocolates = db.Chocolates.ToList();
+            return View(chocolates);
         }
 
         public IActionResult Testimonial()
         {
-            return View();
+            List<Employee> employees = db.Employees.ToList();
+            return View(employees);
         }
 
         public IActionResult Contact()

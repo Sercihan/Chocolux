@@ -1,4 +1,6 @@
-﻿<!-- client section -->
+﻿@model List<Employee>
+
+<!-- client section -->
 
 <section class="client_section layout_padding">
     <div class="container-fluid">
@@ -8,6 +10,8 @@
                     <img src="~/chocolux/images/client-chocolate.png" alt="">
                 </div>
             </div>
+
+
             <div class="col-lg-6 px-0">
                 <div class="client_container">
                     <div class="heading_container">
@@ -15,19 +19,20 @@
                             Testimonial
                         </h2>
                     </div>
+
                     <div id="customCarousel2" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="box">
                                     <div class="img-box">
-                                        <img src="~/chocolux/images/client-img.jpg" alt="">
+                                        <img src="~/chocolux/images/@Model[0].Image" alt="Profil Resmi">
                                     </div>
                                     <div class="detail-box">
                                         <h4>
-                                            Gero Miliya
+                                            @Model[0].Name @Model[0].Surname
                                         </h4>
                                         <p>
-                                            long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                                            @Model[0].Description
                                         </p>
                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                                     </div>
@@ -36,14 +41,14 @@
                             <div class="carousel-item">
                                 <div class="box">
                                     <div class="img-box">
-                                        <img src="~/chocolux/images/client-img.jpg" alt="">
+                                        <img src="~/chocolux/images/@Model[1].Image" alt="Profil Resmi">
                                     </div>
                                     <div class="detail-box">
                                         <h4>
-                                            Gero Miliya
+                                            @Model[1].Name @Model[1].Surname
                                         </h4>
                                         <p>
-                                            long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                                            @Model[1].Description
                                         </p>
                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                                     </div>
@@ -52,14 +57,14 @@
                             <div class="carousel-item">
                                 <div class="box">
                                     <div class="img-box">
-                                        <img src="~/chocolux/images/client-img.jpg" alt="">
+                                        <img src="~/chocolux/images/@Model[2].Image" alt="Profil Resmi">
                                     </div>
                                     <div class="detail-box">
                                         <h4>
-                                            Gero Miliya
+                                            @Model[2].Name @Model[2].Surname
                                         </h4>
                                         <p>
-                                            long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it haslong established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                                            @Model[2].Description
                                         </p>
                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
                                     </div>
@@ -77,10 +82,14 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
 
 <!-- end client section -->

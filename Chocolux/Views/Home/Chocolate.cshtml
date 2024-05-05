@@ -1,4 +1,6 @@
-﻿    <!-- chocolate section -->
+﻿@model List<Chocolate>
+
+<!-- chocolate section -->
 
 <section class="chocolate_section layout_padding">
     <div class="container">
@@ -13,102 +15,25 @@
     </div>
     <div class="container">
         <div class="chocolate_container">
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate1.png" alt="">
+            @foreach (var item in Model)
+            {
+                <div class="box">
+                    <div class="img-box">
+                        <img src="~/chocolux/images/@item.Image" alt="Chocolate Photo">
+                    </div>
+                    <div class="detail-box">
+                        <h6>
+                            @item.Name <span>chocolate</span>
+                        </h6>
+                        <h5>
+                            $@item.Price
+                        </h5>
+                        <a href="">
+                            BUY NOW
+                        </a>
+                    </div>
                 </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate2.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate3.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate2.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-            <div class="box">
-                <div class="img-box">
-                    <img src="~/chocolux/images/chocolate3.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
